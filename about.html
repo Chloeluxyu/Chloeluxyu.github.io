@@ -88,16 +88,22 @@
       </div>
     </section>
 
-    <section class="section" aria-labelledby="moments-title">
+    <section class="section moments-sec" aria-labelledby="moments-title">
       <div class="wrap">
         <h2 class="h2" id="moments-title">Life in <span class="accent">Moments</span></h2>
-        <p class="sub">A few things I love</p>
-        <div class="moments">
-          <div class="moment"><span class="emoji" aria-hidden="true">🌏</span>Travel</div>
-          <div class="moment"><span class="emoji" aria-hidden="true">🎫</span>Events</div>
-          <div class="moment"><span class="emoji" aria-hidden="true">🎵</span>Music</div>
-          <div class="moment"><span class="emoji" aria-hidden="true">📸</span>Photography</div>
-          <div class="moment"><span class="emoji" aria-hidden="true">🌊</span>Ocean</div>
+        <p class="sub">Click on a bubble to explore that interest <span aria-hidden="true">👇</span></p>
+        <div class="bubbles" role="list">
+          <button class="bubble b1" role="listitem" data-key="travel" aria-haspopup="dialog"><span class="orb" aria-hidden="true">🌏</span><span class="lbl">Travel</span></button>
+          <button class="bubble b2" role="listitem" data-key="events" aria-haspopup="dialog"><span class="orb" aria-hidden="true">🎫</span><span class="lbl">Events</span></button>
+          <button class="bubble b3" role="listitem" data-key="music" aria-haspopup="dialog"><span class="orb" aria-hidden="true">🎵</span><span class="lbl">Music</span></button>
+          <button class="bubble b4" role="listitem" data-key="photography" aria-haspopup="dialog"><span class="orb" aria-hidden="true">📸</span><span class="lbl">Photography</span></button>
+          <button class="bubble b5" role="listitem" data-key="ocean" aria-haspopup="dialog"><span class="orb" aria-hidden="true">🌊</span><span class="lbl">Ocean</span></button>
+        </div>
+        <div class="gallery-panel" id="gallery" role="dialog" aria-modal="false" aria-labelledby="g-title" hidden>
+          <button class="g-close" aria-label="Close gallery"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M18 6L6 18M6 6l12 12"/></svg></button>
+          <div class="g-emoji" id="g-emoji" aria-hidden="true"></div>
+          <h3 class="g-title" id="g-title"></h3>
+          <div class="g-row" id="g-row"></div>
         </div>
       </div>
     </section>
@@ -113,5 +119,6 @@
       </div>
     </section>
   </main>
+  <script src="assets/js/about.js"></script>
 </body>
 </html>
