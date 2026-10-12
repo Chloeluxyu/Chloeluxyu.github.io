@@ -145,3 +145,6 @@ section[id] { scroll-margin-top: 72px; }
   html { scroll-behavior: auto; }
   .btn, .work, .moment span.emoji { transition: none; }
 }
+
+.nav a.icon-link { display: inline-flex; padding-bottom: 6px; color: var(--ink-soft); }
+.nav a.icon-link:hover { color: var(--sage-deep); }
