@@ -2,11 +2,11 @@
 // To move or add a photo, edit the lists below (files live in assets/moments/).
 (function () {
   const G = {
-    travel:      { emoji: '🌏', title: 'Travel', photos: [['travel-tokyo','Tokyo Tower at night'],['travel-mural','In front of a tile mural'],['travel-glacier','A glacier river in Norway'],['travel-waterfall','A waterfall in the Norwegian mountains'],['travel-fuji','A street with Mount Fuji behind it']] },
-    events:      { emoji: '🎫', title: 'Events', photos: [['events-concert','At a concert'],['events-market','At a vintage market']] },
-    music:       { emoji: '🎶', title: 'Music', photos: [['music-kid','Playing piano as a child'],['music-sunset','A piano at sunset'],['music-window','A piano by the window']] },
-    photography: { emoji: '📸', title: 'Photography', photos: [['photo-street','A street in Stockholm'],['photo-roses','Paper roses in a window'],['photo-yellow','Golden hour portrait'],['photo-crosswalk','A crosswalk in Stockholm']] },
-    ocean:       { emoji: '🌊', title: 'Ocean', photos: [['ocean-boards','Paddle boards at sunrise'],['ocean-cactus','A cliff above the sea'],['ocean-lake','Swans on a lake'],['ocean-beach','A beach in Barcelona']] }
+    travel:      { emoji: '🌏', title: 'Travel', photos: [['travel-1','At the Eiffel Tower in Paris'],['travel-2','In front of a large tile mural'],['travel-3','Tokyo Tower lit up at night'],['travel-4','At a glacier river in Norway']] },
+    events:      { emoji: '🎫', title: 'Concerts', photos: [['events-1','Spotlights at a concert'],['events-2','A big stage show'],['events-3','Confetti falling at a concert'],['events-4','A performer on a purple-lit stage']] },
+    music:       { emoji: '🎶', title: 'Music', photos: [['music-1','Playing a grand piano on stage'],['music-2','Dancing in a group performance'],['music-3','Playing piano as a child'],['music-4','A piano by a window at sunset']] },
+    photography: { emoji: '📸', title: 'Photography', photos: [['photography-1','A street with Mount Fuji behind it'],['photography-2','A phone filming a pink sunset from a car'],['photography-3','Two trams by the sea'],['photography-4','A city skyline at sunset over ice']] },
+    ocean:       { emoji: '🌊', title: 'Ocean', photos: [['ocean-1','A ferry and seagulls at sea'],['ocean-2','Paddle boards on a beach at dawn'],['ocean-3','The sea seen from a cliff path'],['ocean-4','Turquoise water on a beach']] }
   };
   const panel = document.getElementById('gallery');
   if (!panel) return;

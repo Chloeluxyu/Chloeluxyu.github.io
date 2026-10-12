@@ -172,14 +172,14 @@ section[id] { scroll-margin-top: 72px; }
 .g-close:focus-visible { outline: 3px solid var(--sage); outline-offset: 3px; }
 .g-row { display: flex; gap: 16px; overflow-x: auto; padding: 8px 4px 18px; scroll-snap-type: x proximity; justify-content: safe center; }
 .g-row figure { margin: 0; flex: 0 0 auto; scroll-snap-align: center; }
-.g-row img { height: 330px; width: auto; max-width: 78vw; object-fit: cover; border-radius: 16px; box-shadow: 0 14px 26px -16px rgba(44,44,44,.55); background: var(--mist); transition: transform .25s ease; }
+.g-row img { height: 300px; width: 349px; max-width: 78vw; object-fit: cover; border-radius: 16px; box-shadow: 0 14px 26px -16px rgba(44,44,44,.55); background: var(--mist); transition: transform .25s ease; }
 .g-row img:hover { transform: translateY(-4px); }
 
 @media (max-width: 700px) {
   .bubble .orb { width: 88px; height: 88px; font-size: 42px; }
   .bubbles { gap: 16px 20px; }
   .b2, .b4 { margin-top: 24px; }
-  .g-row img { height: 280px; }
+  .g-row img { height: 256px; width: 298px; }
   .gallery-panel { padding: 30px 14px 22px; }
 }
 @media (prefers-reduced-motion: reduce) { .bubble, .gallery-panel.in { animation: none; } .bubble .orb, .g-row img { transition: none; } }
