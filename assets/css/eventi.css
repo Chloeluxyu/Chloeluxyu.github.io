@@ -1,0 +1,71 @@
+/* Eventi case study theme. Loads after site.css and re-maps its tokens. */
+:root {
+  --paper: #fffdfa;
+  --paper-deep: #fdf0e8;
+  --ink: #1e2a3a;
+  --ink-soft: #55616f;
+  --red: #f26419;          /* Eventi orange */
+  --red-container: #fde3d3;
+  --orange: #f26419;
+  --blue: #7cb1d6;
+  --blue-container: #e3eff8;
+  --line: #f1dfd2;
+  --font: "Montserrat", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --serif: "Playfair Display", Georgia, serif;
+}
+body { font-family: var(--font); }
+.h1, .h2, .h3 { font-family: var(--serif); font-weight: 600; letter-spacing: 0; }
+.h1 { color: var(--red); }
+.overline { color: var(--red); }
+.btn { background: var(--red); color: #fff; }
+.dark, footer.site { background: var(--ink); }
+.band { background: var(--paper-deep); }
+.card { background: var(--paper-deep); }
+.card.on-band { background: var(--paper); }
+.card.blue { background: var(--blue-container); }
+.card.ink { background: var(--ink); color: #fff; }
+.card.ink .small { color: #cdd6e0; }
+.card.orange { background: var(--red); color: #fff; }
+.card.orange .small, .card.orange p { color: #fff; }
+.card.orange .overline { color: #fff; opacity: .85; }
+
+.win { margin: 0; background: #fff; border: 1px solid var(--line); border-radius: 16px; overflow: hidden; box-shadow: 0 24px 48px -26px rgba(30,42,58,.45); }
+.win::before { content: ""; display: block; height: 26px; background: #f4efe9 url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='60' height='10'%3E%3Ccircle cx='8' cy='5' r='3.2' fill='%23e5a9a0'/%3E%3Ccircle cx='22' cy='5' r='3.2' fill='%23e8d19a'/%3E%3Ccircle cx='36' cy='5' r='3.2' fill='%23a9cfa2'/%3E%3C/svg%3E") 12px center no-repeat; border-bottom: 1px solid var(--line); }
+.win img { width: 100%; height: auto; display: block; }
+.win-cap { margin-top: 12px; }
+.win-cap b { display: block; font-weight: 600; }
+
+.hero-shot { margin: 0; justify-self: center; width: 100%; }
+
+.compare { display: grid; grid-template-columns: 1fr 1fr; gap: 28px; align-items: start; }
+.compare figure { margin: 0; display: grid; gap: 12px; }
+.compare .tag-d, .compare .tag-b { justify-self: start; padding: 5px 14px; border-radius: 999px; font-size: 13px; font-weight: 600; }
+.tag-d { background: var(--blue-container); color: #2c5d7c; }
+.tag-b { background: var(--red); color: #fff; }
+
+.insp { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.insp .card { display: grid; gap: 8px; align-content: start; }
+.insp .src { font-weight: 700; color: var(--red); }
+
+.req { display: grid; grid-template-columns: repeat(2, 1fr); gap: 16px; }
+.req .card { display: grid; gap: 6px; align-content: start; }
+.flow-rules { display: grid; gap: 14px; margin: 0; padding: 0; list-style: none; }
+.flow-rules li { background: var(--paper); border-radius: 18px; padding: 18px 24px; display: grid; grid-template-columns: 1fr; gap: 4px; }
+.flow-rules b { font-weight: 600; }
+
+.sw-row { display: flex; flex-wrap: wrap; gap: 12px; }
+.sw { display: grid; gap: 6px; justify-items: center; font-size: 13px; color: var(--ink-soft); }
+.sw i { width: 48px; height: 48px; border-radius: 50%; border: 1px solid var(--line); background: var(--c); }
+
+.mine { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+.mine ul { margin: 12px 0 0; padding: 0; list-style: none; display: grid; gap: 10px; }
+.mine li { display: flex; gap: 12px; align-items: flex-start; font-size: 15px; }
+.mine li::before { content: ""; flex: none; width: 8px; height: 8px; border-radius: 50%; margin-top: 9px; background: var(--red); }
+.card.orange li::before { background: #fff; }
+
+.gallery-e { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.gallery-e figure { margin: 0; display: grid; gap: 10px; align-content: start; }
+
+@media (max-width: 1000px) {
+  .compare, .insp, .req, .mine, .gallery-e { grid-template-columns: 1fr; }
+}

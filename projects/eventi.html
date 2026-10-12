@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Eventi · Chloe Lu</title>
+  <meta name="description" content="Eventi is a community events web app built by a team of six. Case study of the design work: sign up, log in, browse, profile and calendar, from Figma to a running product.">
+  <meta property="og:title" content="Eventi · Chloe Lu">
+  <meta property="og:image" content="../assets/eventi/browse.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+  <link rel="stylesheet" href="../assets/css/eventi.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+  <header class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="../index.html">Chloe Lu</a>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#projects" aria-current="page">Projects</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+    <!-- HERO -->
+    <section class="wrap hero" aria-labelledby="title">
+      <div class="hero-text">
+        <span class="tag" style="justify-self:start">Web app · Team project · Design to code</span>
+        <h1 class="h1" id="title">Eventi</h1>
+        <p class="lead">A community events app where people discover local gatherings, host their own and keep track of what’s coming up. Built by a team of six in Scrum sprints.</p>
+        <dl class="meta">
+          <div style="grid-column:1/-1"><dt>My role</dt><dd>UX/UI design of sign up, log in, browse, profile and calendar, plus code for calendar, event actions and navigation</dd></div>
+          <div><dt>Team</dt><dd>6 students, Chalmers</dd></div>
+          <div><dt>When</dt><dd>Jan – Mar 2026</dd></div>
+          <div><dt>Design</dt><dd>Figma</dd></div>
+          <div><dt>Stack</dt><dd>Next.js · MongoDB · TypeScript</dd></div>
+        </dl>
+      </div>
+      <figure class="hero-shot">
+        <div class="win"><img src="../assets/eventi/browse.jpg" width="1800" height="1780" alt="The running Eventi app on the Browse Events page, with search, filters and event cards"></div>
+      </figure>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" aria-label="At a glance" style="background:var(--paper-deep)">
+      <div class="wrap grid cols-4">
+        <div class="stat"><b>14</b><span>screens and states designed in Figma</span></div>
+        <div class="stat"><b>6</b><span>people in the team, working in sprints</span></div>
+        <div class="stat"><b>3</b><span>products studied for inspiration: Venga, Luma, a Dribbble app</span></div>
+        <div class="stat"><b>1</b><span>design system shared with the developers</span></div>
+      </div>
+    </section>
+
+    <!-- MY CONTRIBUTION -->
+    <section class="section" aria-labelledby="mine-title">
+      <div class="wrap stack">
+        <div class="stack-sm"><p class="overline">My contribution</p><h2 class="h2" id="mine-title">Designed the account and calendar side, then helped build it</h2></div>
+        <div class="mine">
+          <div class="card" style="padding:32px 36px">
+            <p class="overline">Design</p>
+            <ul>
+              <li>Sign up landing, sign up and log in</li>
+              <li>Browse events and the event cards</li>
+              <li>Profile, edit profile and delete-account confirmation</li>
+              <li>Calendar view, on the profile and on the logged-in home page</li>
+              <li>Components such as navigation, search bar, RSVP and heart</li>
+            </ul>
+          </div>
+          <div class="card orange" style="padding:32px 36px">
+            <p class="overline">Code (from the team repository)</p>
+            <ul>
+              <li>Calendar and event management, and liking events</li>
+              <li>Signing up for events</li>
+              <li>Editing and deleting events you host</li>
+              <li>Navigation bar and the Eventi logo, in Figma and as an image</li>
+            </ul>
+          </div>
+        </div>
+        <p class="small">The other pages, the data layer and authentication were built by teammates. Built with AI assistance (Claude) as a pairing tool.</p>
+      </div>
+    </section>
+
+    <!-- INSPIRATION -->
+    <section class="section band" aria-labelledby="insp-title">
+      <div class="wrap stack">
+        <div class="stack-sm"><p class="overline">Research</p><h2 class="h2" id="insp-title">Learning from what already works</h2><p class="lead">Before drawing anything, I collected screens from other event products and wrote down what each one did well.</p></div>
+        <div class="insp">
+          <div class="card on-band"><p class="src">Venga</p><p class="small">Simple event creation with dress code and extra info. One place for invites, RSVPs and photo sharing. Clubs for recurring events.</p></div>
+          <div class="card on-band"><p class="src">Luma</p><p class="small">A minimal discover page with categories. A map for browsing events. A very good event-name typeface.</p></div>
+          <div class="card on-band"><p class="src">A Dribbble app</p><p class="small">Add events to favourites, category tags, a quiet layout with warm colour balanced by black and white.</p></div>
+          <div class="card on-band"><p class="src">Creation flows</p><p class="small">Start by choosing a category, then add detail. A clear choice of who can see the event.</p></div>
+          <div class="card on-band"><p class="src">Profile pages</p><p class="small">A clear structure. See who is attending, and which events your friends joined. Interests and preferred places are worth having.</p></div>
+          <div class="card on-band"><p class="src">What we took</p><p class="small">Minimal layout, categories first, warm accent colour, a serif for event names, favourites as a heart.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- REQUIREMENTS + DECISIONS -->
+    <section class="section" aria-labelledby="req-title">
+      <div class="wrap stack">
+        <div class="stack-sm"><p class="overline">Define</p><h2 class="h2" id="req-title">What each page needs to do</h2><p class="lead">We wrote the content for every page before designing it, so developers and designers worked from the same list.</p></div>
+        <div class="req">
+          <div class="card"><h3 class="h3" style="font-size:20px">Browse</h3><p class="small">Search bar, filters for location, dates, category and creator. Each event shows image, host, date, approximate place, category, RSVP, how many are going and which friends.</p></div>
+          <div class="card"><h3 class="h3" style="font-size:20px">Event details</h3><p class="small">Everything on the card plus description, min and max participants, who may join, public or private, and host contact. Hosts get an edit button.</p></div>
+          <div class="card"><h3 class="h3" style="font-size:20px">Profile</h3><p class="small">Edit info, saved events, past events, upcoming events and the events I host. A calendar view of the same events.</p></div>
+          <div class="card"><h3 class="h3" style="font-size:20px">Sign up and log in</h3><p class="small">Name, email, gender, age, location and password to sign up. Email and password to log in.</p></div>
+        </div>
+        <h3 class="h3">Flow decisions we made along the way</h3>
+        <ul class="flow-rules">
+          <li><b>Confirm after sign up and after creating an event.</b><span class="small">After creating an event, take the person straight to that event’s page.</span></li>
+          <li><b>No signing up for an event without being logged in.</b><span class="small">A page reminds the user to log in first, so the action never half-completes.</span></li>
+          <li><b>Account pages grouped under the profile.</b><span class="small">Edit info, delete account, saved events, hosted events and past events all live there.</span></li>
+          <li><b>A trade-off we discussed:</b><span class="small">Requiring an account before browsing is easiest to build but less friendly. We weighed it against a landing page that offers sign up or log in.</span></li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- DESIGN SCREENS -->
+    <section class="section band" aria-labelledby="des-title">
+      <div class="wrap stack">
+        <div class="stack-sm"><p class="overline">Design</p><h2 class="h2" id="des-title">The screens I designed</h2></div>
+        <div class="gallery-e">
+          <figure><div class="win"><img src="../assets/eventi/fig-signup-landing.jpg" alt="Landing page: find events that fit how you want to connect" loading="lazy"></div><figcaption class="win-cap"><b>Landing</b><span class="small">One message and two clear actions, with three reasons to join.</span></figcaption></figure>
+          <figure><div class="win"><img src="../assets/eventi/fig-signup.jpg" alt="Sign up form titled Let's get you on the guest list" loading="lazy"></div><figcaption class="win-cap"><b>Sign up</b><span class="small">A short form with a friendly headline.</span></figcaption></figure>
+          <figure><div class="win"><img src="../assets/eventi/fig-login.jpg" alt="Log in form titled Your calendar's about to glow up" loading="lazy"></div><figcaption class="win-cap"><b>Log in</b><span class="small">Two fields and a forgot-password link.</span></figcaption></figure>
+          <figure><div class="win"><img src="../assets/eventi/fig-home.jpg" alt="Logged-in home with upcoming events, your events and recommendations" loading="lazy"></div><figcaption class="win-cap"><b>Home, list view</b><span class="small">Upcoming, your own events and recommendations.</span></figcaption></figure>
+          <figure><div class="win"><img src="../assets/eventi/fig-home-cal.jpg" alt="Logged-in home with a monthly calendar and colour-coded filters" loading="lazy"></div><figcaption class="win-cap"><b>Home, calendar view</b><span class="small">Hosting, upcoming, saved and past, each with its own colour.</span></figcaption></figure>
+          <figure><div class="win"><img src="../assets/eventi/fig-browse.jpg" alt="Browse events page with search and filters" loading="lazy"></div><figcaption class="win-cap"><b>Browse</b><span class="small">Search by what, where and when, with category and format filters.</span></figcaption></figure>
+          <figure><div class="win"><img src="../assets/eventi/fig-details.jpg" alt="Event details page for a guest" loading="lazy"></div><figcaption class="win-cap"><b>Event details</b><span class="small">Date and place in a highlighted box, host contact at the bottom.</span></figcaption></figure>
+          <figure><div class="win"><img src="../assets/eventi/fig-create.jpg" alt="Create event page" loading="lazy"></div><figcaption class="win-cap"><b>Create event</b><span class="small">Title first, then category, who is invited and contact details.</span></figcaption></figure>
+          <figure><div class="win"><img src="../assets/eventi/fig-profile.jpg" alt="Profile page with a list of upcoming events" loading="lazy"></div><figcaption class="win-cap"><b>Profile</b><span class="small">Four tabs: upcoming, saved, hosted and past events.</span></figcaption></figure>
+          <figure><div class="win"><img src="../assets/eventi/fig-edit.jpg" alt="Edit profile form" loading="lazy"></div><figcaption class="win-cap"><b>Edit profile</b><span class="small">Simple fields, with account deletion kept apart.</span></figcaption></figure>
+          <figure><div class="win"><img src="../assets/eventi/fig-cal-events.jpg" alt="Profile calendar showing an event on the selected day" loading="lazy"></div><figcaption class="win-cap"><b>Calendar with events</b><span class="small">Pick a day to see what is on it.</span></figcaption></figure>
+          <figure><div class="win"><img src="../assets/eventi/fig-cal-empty.jpg" alt="Profile calendar with no events on the selected day" loading="lazy"></div><figcaption class="win-cap"><b>Calendar, empty day</b><span class="small">An explicit “no events scheduled” state.</span></figcaption></figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- DESIGN VS BUILT -->
+    <section class="section" aria-labelledby="built-title">
+      <div class="wrap stack">
+        <div class="stack-sm"><p class="overline">From design to product</p><h2 class="h2" id="built-title">What shipped</h2><p class="lead">The running app follows the designs closely. The built version added real event artwork, colour-coded calendar chips and a dark mode.</p></div>
+        <div class="compare">
+          <figure><span class="tag-d">Design</span><div class="win"><img src="../assets/eventi/fig-home-cal.jpg" alt="Designed calendar home" loading="lazy"></div></figure>
+          <figure><span class="tag-b">Built</span><div class="win"><img src="../assets/eventi/home-calendar.jpg" alt="The built calendar home with Hosting, Upcoming, Saved and Past filters" loading="lazy"></div></figure>
+        </div>
+        <div class="compare">
+          <figure><span class="tag-d">Design</span><div class="win"><img src="../assets/eventi/fig-browse.jpg" alt="Designed browse page" loading="lazy"></div></figure>
+          <figure><span class="tag-b">Built</span><div class="win"><img src="../assets/eventi/browse.jpg" alt="Built browse page with event artwork" loading="lazy"></div></figure>
+        </div>
+        <div class="compare">
+          <figure><span class="tag-d">Design</span><div class="win"><img src="../assets/eventi/fig-details.jpg" alt="Designed event details page" loading="lazy"></div></figure>
+          <figure><span class="tag-b">Built</span><div class="win"><img src="../assets/eventi/event-details.jpg" alt="Built event details as a modal with additional information" loading="lazy"></div></figure>
+        </div>
+        <div class="grid cols-2">
+          <div class="card"><h3 class="h3" style="font-size:20px">Edit your own events</h3><p class="small">Hosts see an edit pencil on their cards, which opens an edit form.</p><div class="win" style="margin-top:12px"><img src="../assets/eventi/edit-event.jpg" alt="Edit event modal" loading="lazy"></div></div>
+          <div class="card"><h3 class="h3" style="font-size:20px">Account</h3><p class="small">Name, username, bio and privacy toggles for each field.</p><div class="win" style="margin-top:12px"><img src="../assets/eventi/account.jpg" alt="My account page" loading="lazy"></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SYSTEM -->
+    <section class="section band" aria-labelledby="sys-title">
+      <div class="wrap stack">
+        <div class="stack-sm"><p class="overline">Design system</p><h2 class="h2" id="sys-title">A small set of components</h2><p class="lead">Navigation, search bar, RSVP, heart, event-type tags and event cards were built once in Figma, so every page used the same pieces.</p></div>
+        <div class="win"><img src="../assets/eventi/fig-components.jpg" alt="The Eventi component library in Figma" loading="lazy"></div>
+        <div class="sw-row">
+          <div class="sw" style="--c:#f26419"><i></i>Orange</div>
+          <div class="sw" style="--c:#fffdfa"><i></i>Cream</div>
+          <div class="sw" style="--c:#7cb1d6"><i></i>Blue</div>
+          <div class="sw" style="--c:#1e2a3a"><i></i>Ink</div>
+        </div>
+        <p class="small">Type: Playfair Display for titles and event names, Montserrat for everything else.</p>
+      </div>
+    </section>
+
+    <!-- REFLECTION -->
+    <section class="section" aria-labelledby="refl-title">
+      <div class="wrap stack">
+        <div class="stack-sm"><p class="overline">Reflection</p><h2 class="h2" id="refl-title">What I took away, and what’s next</h2></div>
+        <div class="grid cols-3">
+          <div class="card"><h3 class="h3" style="font-size:20px">Write the page first</h3><p class="small">Listing what each page must contain made hand-off to developers much easier.</p></div>
+          <div class="card"><h3 class="h3" style="font-size:20px">Designing flows, not just screens</h3><p class="small">Rules such as “no RSVP without logging in” prevented dead ends before they were built.</p></div>
+          <div class="card"><h3 class="h3" style="font-size:20px">Design in code is different</h3><p class="small">Building the calendar myself showed how many small states a single screen hides.</p></div>
+        </div>
+        <div class="card orange" style="padding:32px 40px">
+          <p class="overline">Known gaps</p>
+          <ul class="list-dots" style="margin-top:12px">
+            <li>The mobile layout needs work: filter chips overlap, search fields clip at the edge and calendar cells are very narrow.</li>
+            <li>We did not test with users, so none of the design choices are validated yet.</li>
+            <li>Designed but not built: the map, sharing by link and showing friends attending.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <p>Eventi team: six students at Chalmers University of Technology</p>
+    <p class="h2" style="color:#fff">Thanks for reading</p>
+    <a class="btn" href="../index.html#projects">Back to portfolio</a>
+  </footer>
+</body>
+</html>

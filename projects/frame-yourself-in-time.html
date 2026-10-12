@@ -1,0 +1,426 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Frame Yourself in Time · Chloe Lu</title>
+  <meta name="description" content="An interactive generative-AI installation that turns an elevator waiting room in Gothenburg into a playful journey through the city's history. Interaction design case study.">
+  <meta property="og:title" content="Frame Yourself in Time · Chloe Lu">
+  <meta property="og:description" content="Interaction design case study: a generative-AI installation for Gothenburg's Läppstiftet, evaluated with 33 exhibition visitors.">
+  <meta property="og:image" content="../assets/fyit/cover-gustav-adolfs-torg.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body>
+  <a class="skip" href="#main">Skip to content</a>
+
+  <header class="wrap">
+    <nav class="nav" aria-label="Main">
+      <a class="brand" href="../index.html">Chloe Lu</a>
+      <ul>
+        <li><a href="../index.html">Home</a></li>
+        <li><a href="../index.html#projects" aria-current="page">Projects</a></li>
+        <li><a href="../about.html">About</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <main id="main">
+
+    <!-- HERO -->
+    <section class="wrap hero" aria-labelledby="title">
+      <div class="hero-text">
+        <span class="tag" style="justify-self:start">Interactive installation · Generative AI</span>
+        <h1 class="h1" id="title">Frame Yourself in Time</h1>
+        <p class="lead">An interactive installation that turns the Lipsticks Lookout’s elevator waiting room into a playful, personalised journey through Gothenburg’s history.</p>
+        <dl class="meta">
+          <div style="grid-column:1/-1"><dt>My role</dt><dd>User flow, project website, AI scene generation, and user testing: moderation, survey design and data analysis</dd></div>
+          <div><dt>Discipline</dt><dd>Interaction design</dd></div>
+          <div><dt>Team</dt><dd>Group of 4</dd></div>
+          <div><dt>Where</dt><dd>Designed for Läppstiftet, Gothenburg</dd></div>
+          <div><dt>Shown</dt><dd>Course exhibition, May 2026</dd></div>
+          <div><dt>Stack</dt><dd>ComfyUI · Three.js · Python</dd></div>
+          <div><dt>Design in</dt><dd>Figma</dd></div>
+        </dl>
+      </div>
+      <figure class="hero-cover">
+        <img src="../assets/fyit/cover-gustav-adolfs-torg.jpg" width="2000" height="1091" alt="Generated painting of Gustav Adolfs Torg in 1861, with a visitor's historical character in a tricorn hat walking through the busy square">
+      </figure>
+    </section>
+
+    <!-- STATS -->
+    <section class="stats" aria-label="Results at a glance">
+      <div class="wrap grid cols-4">
+        <div class="stat"><b>4.45 / 5</b><span>average rating from 33 exhibition visitors</span></div>
+        <div class="stat"><b>97%</b><span>would tell others about it, definitely or probably</span></div>
+        <div class="stat"><b>2.03</b><span>UEQ-S score from 29 visitors, top 10% of the benchmark</span></div>
+        <div class="stat"><b>91%</b><span>said the wait felt right or shorter than expected</span></div>
+      </div>
+    </section>
+
+    <!-- MY CONTRIBUTION -->
+    <section class="section" aria-labelledby="mine-title" style="padding-bottom:0">
+      <div class="wrap stack-sm">
+        <p class="overline" id="mine-title">My contribution</p>
+        <div class="grid cols-4">
+          <div class="card"><p class="overline">1</p><h3 class="h3">User flow</h3><p class="small">I designed the flow of the experience, from queueing to stepping into the lift.</p></div>
+          <div class="card"><p class="overline">2</p><h3 class="h3">Project website</h3><p class="small">I designed the project website for the installation.</p></div>
+          <div class="card"><p class="overline">3</p><h3 class="h3">AI scenes</h3><p class="small">I generated the historical backgrounds for the three scenes with AI.</p></div>
+          <div class="card"><p class="overline">4</p><h3 class="h3">Testing and survey</h3><p class="small">I moderated the user testing, designed and ran the survey, and analysed the data.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- LIVING SQUARE VIDEO -->
+    <section class="section" aria-labelledby="living-title">
+      <div class="wrap stack">
+        <div class="stack-sm">
+          <p class="overline">See it working</p>
+          <h2 class="h2" id="living-title">The living square</h2>
+          <p class="lead">A working demo of the projected mural, with generated citizens moving through historical Gothenburg.</p>
+        </div>
+        <figure class="figure">
+          <video class="video shadow" controls muted loop playsinline preload="metadata"
+                 poster="../assets/fyit/poster-living-square.jpg"
+                 aria-label="Demo of the living square installation with generated citizens moving through historical Gothenburg.">
+            <source src="../assets/fyit/living-square.mp4" type="video/mp4">
+          </video>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PORTRAITS -->
+    <section class="section band" aria-labelledby="portraits-title">
+      <div class="wrap stack">
+        <div class="stack-sm">
+          <p class="overline">The idea in one picture</p>
+          <h2 class="h2" id="portraits-title">From a selfie to a citizen of 1861</h2>
+          <p class="lead">A generative model maps each visitor onto a historical persona. One photo in, one historical citizen out.</p>
+        </div>
+        <div class="grid cols-4">
+          <div class="pair" style="background:var(--paper)"><div class="imgs"><img class="before" src="../assets/fyit/scand-man-before.jpg" alt="Visitor photo, before"><img class="after" src="../assets/fyit/scand-man-after.jpg" alt="Generated historical character, after"></div><div class="labels"><span>Before</span><span>After</span></div></div>
+          <div class="pair" style="background:var(--paper)"><div class="imgs"><img class="before" src="../assets/fyit/scand-woman-before.jpg" alt="Visitor photo, before"><img class="after" src="../assets/fyit/scand-woman-after.jpg" alt="Generated historical character, after"></div><div class="labels"><span>Before</span><span>After</span></div></div>
+          <div class="pair" style="background:var(--paper)"><div class="imgs"><img class="before" src="../assets/fyit/asian-man-before.jpg" alt="Visitor photo, before"><img class="after" src="../assets/fyit/asian-man-after.jpg" alt="Generated historical character, after"></div><div class="labels"><span>Before</span><span>After</span></div></div>
+          <div class="pair" style="background:var(--paper)"><div class="imgs"><img class="before" src="../assets/fyit/african-woman-before.jpg" alt="Visitor photo, before"><img class="after" src="../assets/fyit/african-woman-after.jpg" alt="Generated historical character, after"></div><div class="labels"><span>Before</span><span>After</span></div></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="section" aria-labelledby="overview-title">
+      <div class="wrap stack">
+        <div class="stack-sm">
+          <p class="overline">Overview</p>
+          <h2 class="h2" id="overview-title">Turning idle waiting into the first moment of the visit</h2>
+        </div>
+        <div class="grid cols-2" style="align-items:stretch">
+          <article class="problem">
+            <img src="../assets/fyit/waiting-area.jpg" alt="The curved mural in the Lipsticks waiting area today">
+            <div class="body">
+              <p class="overline">The problem</p>
+              <h3 class="h3">The elevator bottleneck</h3>
+              <p class="small">The Lipsticks Lookout has limited elevator capacity, which creates a natural gathering point on the ground floor. Today that pause is filled with static murals visitors walk past.</p>
+              <p class="question">How do we turn idle waiting into a memorable entry point?</p>
+            </div>
+          </article>
+          <article class="card ink" style="border-radius:var(--radius-xl);padding:40px">
+            <p class="overline" style="color:var(--orange)">The solution</p>
+            <h3 class="h3">Step up, take a photo, meet your historical double</h3>
+            <p>A kiosk takes your portrait. A generative model reimagines you as an 18th or 19th-century merchant, coachman or noble, and your double joins a living mural on the wall while you wait for the lift.</p>
+            <div class="chips"><span class="chip">Generative AI</span><span class="chip">Projection mapping</span><span class="chip">Public space</span><span class="chip">Heritage storytelling</span></div>
+            <p class="overline" style="color:var(--orange);margin-top:22px">Pick a role, arrive in its world</p>
+            <ul class="roles">
+              <li><span class="strong">Merchant</span><span>Gustav Adolfs Torg</span></li>
+              <li><span class="strong">Coachman</span><span>Lilla Bommen</span></li>
+              <li><span class="strong">Noble</span><span>Tjolöholms Slott</span></li>
+            </ul>
+          </article>
+        </div>
+
+        <div class="stack-sm">
+          <h3 class="h3">The visitor journey, from queue to lift</h3>
+          <div class="journey"><img src="../assets/fyit/user-journey.jpg" alt="Illustrated user journey from entering the waiting area to stepping into the elevator" loading="lazy"></div>
+          <div class="grid cols-5" style="margin-top:6px">
+            <div class="step"><p class="overline">1</p><b>Enter and queue</b><p class="small">Drawn in by the living mural already playing on the wall.</p></div>
+            <div class="step"><p class="overline">2</p><b>Capture</b><p class="small">A quick portrait at a compact kiosk, the only action needed.</p></div>
+            <div class="step"><p class="overline">3</p><b>Synthesis</b><p class="small">A model maps your features onto a chosen historical persona.</p></div>
+            <div class="step"><p class="overline">4</p><b>Appear on the wall</b><p class="small">Your avatar joins the live mural alongside other tiny citizens.</p></div>
+            <div class="step"><p class="overline">5</p><b>Step into the lift</b><p class="small">You have met your double and started the visit a beat early.</p></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- PIVOT -->
+    <section class="section band" aria-labelledby="pivot-title">
+      <div class="wrap stack">
+        <div class="stack-sm">
+          <p class="overline">The pivot</p>
+          <h2 class="h2" id="pivot-title">We started with a 3D mirror. It didn’t work.</h2>
+          <p class="lead">Our first concept tracked the visitor’s body and moved a matching 3D historical avatar through a digital reconstruction of the square. Early prototype tests ruled it out.</p>
+        </div>
+        <div class="grid cols-3">
+          <div class="card on-band" style="padding:30px;border-radius:26px"><p class="overline">1</p><h3 class="h3">The visuals didn’t match</h3><p class="small">Three.js couldn’t reproduce the lighting and textures built in Blender, so the scene looked distorted.</p></div>
+          <div class="card on-band" style="padding:30px;border-radius:26px"><p class="overline">2</p><h3 class="h3">The bodies looked wrong</h3><p class="small">Tracking data made limbs clip through the meshes, and flat 2D faces on rigid 3D bodies broke the feeling of “that’s me”.</p></div>
+          <div class="card on-band" style="padding:30px;border-radius:26px"><p class="overline">3</p><h3 class="h3">It was too slow</h3><p class="small">Live 3D rendering plus body tracking caused delays, the opposite of shortening the wait.</p></div>
+        </div>
+        <div class="card ink" style="padding:28px 36px;border-radius:26px">
+          <p class="overline" style="color:var(--orange)">So we pivoted</p>
+          <p>To a high-fidelity 2D generative workflow in ComfyUI. Before finalising the interface we ran a full-pipeline feasibility test, covering capture, generation and display in one staging website.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- SCENES -->
+    <section class="section" aria-labelledby="scenes-title">
+      <div class="wrap stack">
+        <div class="stack-sm">
+          <p class="overline">The world</p>
+          <h2 class="h2" id="scenes-title">Three living scenes</h2>
+          <p class="lead">Each generated character is placed into a historical Gothenburg backdrop. The role you pick at the kiosk decides which scene you arrive in.</p>
+        </div>
+        <div class="grid cols-3">
+          <article class="scene">
+            <video muted loop playsinline preload="none" poster="../assets/fyit/poster-gustav-adolfs-torg.jpg" aria-label="Animated scene of Gustav Adolfs Torg"><source src="../assets/fyit/gustav-adolfs-torg.mp4" type="video/mp4"></video>
+            <div class="body"><p class="overline">Merchants</p><h3 class="h3">Gustav Adolfs Torg</h3><p class="small">The civic heart of 19th-century Gothenburg, busy with merchants and carriages.</p></div>
+          </article>
+          <article class="scene">
+            <video muted loop playsinline preload="none" poster="../assets/fyit/poster-lilla-bommen.jpg" aria-label="Animated scene of Lilla Bommen harbour"><source src="../assets/fyit/lilla-bommen.mp4" type="video/mp4"></video>
+            <div class="body"><p class="overline">Coachmen</p><h3 class="h3">Lilla Bommen</h3><p class="small">The old harbour: ropes, sails and dockside life by the water that built the city.</p></div>
+          </article>
+          <article class="scene">
+            <video muted loop playsinline preload="none" poster="../assets/fyit/poster-tjoloholm.jpg" aria-label="Animated scene of Tjolöholms Slott"><source src="../assets/fyit/tjoloholm.mp4" type="video/mp4"></video>
+            <div class="body"><p class="overline">Nobles</p><h3 class="h3">Tjolöholms Slott</h3><p class="small">Turn-of-the-century elegance, gardens and the quiet grandeur of country life.</p></div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- KIOSK -->
+    <section class="section band" aria-labelledby="kiosk-title">
+      <div class="wrap stack">
+        <div class="stack-sm">
+          <p class="overline">The interface</p>
+          <h2 class="h2" id="kiosk-title">Designing the kiosk</h2>
+          <p class="lead">We mapped every tap a visitor would make, from the moment the kiosk wakes up to the second they spot themselves on the wall, and prototyped each screen in Figma.</p>
+        </div>
+        <div class="screens">
+          <figure class="figure"><img src="../assets/fyit/kiosk-1.jpg" alt="Kiosk welcome screen showing an 1861 painting of Gothenburg" loading="lazy"><figcaption><span class="overline">01</span><b>Welcome</b>An animated 1861 painting sets the scene, and a high-contrast button shows what to do.</figcaption></figure>
+          <figure class="figure"><img src="../assets/fyit/kiosk-2.jpg" alt="Kiosk screen with a carousel of three historical outfits" loading="lazy"><figcaption><span class="overline">02</span><b>Choose your role</b>A carousel of three roles turns choosing into role-play.</figcaption></figure>
+          <figure class="figure"><img src="../assets/fyit/kiosk-3.jpg" alt="Kiosk screen with the camera unlock button" loading="lazy"><figcaption><span class="overline">03</span><b>Unlock the camera</b>A message says the AI will edit your photo before the camera opens, then a 3-2-1 countdown.</figcaption></figure>
+          <figure class="figure"><img src="../assets/fyit/kiosk-6.jpg" alt="Kiosk loading screen with a hand-drawn hourglass" loading="lazy"><figcaption><span class="overline">04</span><b>In process</b>A hand-drawn hourglass replaces a modern spinner, so the loading state stays in period.</figcaption></figure>
+          <figure class="figure"><img src="../assets/fyit/kiosk-7.jpg" alt="Kiosk final screen reading Till Lycka in a botanical frame" loading="lazy"><figcaption><span class="overline">05</span><b>Till Lycka!</b>A gently floating logo turns the last screen into a small reward.</figcaption></figure>
+        </div>
+        <p class="small">The selfie and confirm screens are left out here because they show a placeholder portrait. Confirm or retake gives visitors an undo before generation starts.</p>
+        <div class="grid cols-3">
+          <div class="card red"><h3 class="h3">We cut the tutorial</h3><p class="small">Testing showed the kiosk was readable without one.</p></div>
+          <div class="card red"><h3 class="h3">Three roles, not six</h3><p class="small">The project’s time limit forced the choice. We’d want to grow it.</p></div>
+          <div class="card red"><h3 class="h3">Short on purpose</h3><p class="small">Every second past four belongs to the elevator.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- HOW IT WORKS -->
+    <section class="section" aria-labelledby="how-title">
+      <div class="wrap stack">
+        <div class="stack-sm">
+          <p class="overline">Under the hood</p>
+          <h2 class="h2" id="how-title">From one photo to a tiny citizen</h2>
+          <p class="lead">The pipeline runs in ComfyUI and has to finish inside the natural wait for the lift.</p>
+        </div>
+        <ol class="pipeline" style="list-style:none;padding:0;margin:0">
+          <li class="card"><p class="overline">01</p><p class="strong">Background removal</p></li>
+          <li class="card"><p class="overline">02</p><p class="strong">Persona mapping</p></li>
+          <li class="card"><p class="overline">03</p><p class="strong">Costume synthesis</p></li>
+          <li class="card"><p class="overline">04</p><p class="strong">Size normalisation</p></li>
+        </ol>
+        <div class="grid cols-4">
+          <div class="card outline"><p class="overline">Hardware</p><p class="small" style="color:var(--ink)">Camera kiosk and wall projection mapping</p></div>
+          <div class="card outline"><p class="overline">Framework</p><p class="small" style="color:var(--ink)">Three.js and Python</p></div>
+          <div class="card outline"><p class="overline">Generative core</p><p class="small" style="color:var(--ink)">ComfyUI</p></div>
+          <div class="card outline"><p class="overline">Output</p><p class="small" style="color:var(--ink)">Real-time, scene-aware projection</p></div>
+        </div>
+        <div class="grid cols-2">
+          <div class="card"><h3 class="h3">Two screens</h3><p class="small">A laptop is the control terminal and a TV shows the scene. The display also shows a QR code, so visitors can download their picture.</p></div>
+          <div class="card"><h3 class="h3">Citizens that stay</h3><p class="small">While you play, a second process turns your photo into a generic historical citizen from one of ten prompts. After you leave, that citizen stays in the scene.</p></div>
+        </div>
+        <div class="card ink" style="padding:32px 40px;border-radius:var(--radius-lg)">
+          <p class="overline" style="color:var(--orange)">Design principle · playful urban interaction</p>
+          <p>Generative AI lets people playfully alter the urban scene instead of passively consuming it. Gothenburg’s history becomes a place visitors briefly inhabit, not a panel they read.</p>
+          <p class="small">After Hung et al., 2025, CHI.</p>
+        </div>
+
+        <!-- Full demo. Self-hosted by default (assets/fyit/full-demo.mp4).
+             To stream from YouTube/Vimeo instead, put the EMBED url in data-src below (see assets/js/site.js). -->
+        <div class="stack-sm">
+          <h3 class="h3">Demo: the full user process</h3>
+          <p class="small">One end-to-end walkthrough, from kiosk capture to wall projection (about one minute).</p>
+          <div class="demo-slot" id="demo" data-src="">
+            <video class="video" controls playsinline preload="none"
+                   poster="../assets/fyit/poster-full-demo.jpg"
+                   aria-label="Full walkthrough of Frame Yourself in Time, from kiosk capture to wall projection.">
+              <source src="../assets/fyit/full-demo.mp4" type="video/mp4">
+              Your browser can’t play this video. <a href="../assets/fyit/full-demo.mp4">Download it</a>.
+            </video>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- EVALUATION -->
+    <section class="section band" aria-labelledby="eval-title">
+      <div class="wrap stack">
+        <div class="stack-sm">
+          <p class="overline">Evaluation</p>
+          <h2 class="h2" id="eval-title">What 33 visitors told us</h2>
+          <p class="lead">We evaluated the installation at the exhibition on 26 May 2026, with a short survey (33 responses) and the UEQ-S (29 responses). I designed and ran the survey and analysed the data.</p>
+        </div>
+
+        <div class="grid cols-2">
+          <section class="card on-band" aria-labelledby="c-rating" style="padding:32px">
+            <p class="overline" id="c-rating">Overall rating</p>
+            <p class="big"><b>4.45</b><span>out of 5</span></p>
+            <div class="bar-row"><span>5 stars</span><div class="bar" style="--v:100%"><i></i></div><output>16</output></div>
+            <div class="bar-row"><span>4 stars</span><div class="bar" style="--v:100%"><i></i></div><output>16</output></div>
+            <div class="bar-row"><span>3 stars</span><div class="bar" style="--v:6.25%"><i></i></div><output>1</output></div>
+            <div class="bar-row"><span>2 stars</span><div class="bar" style="--v:0%"><i></i></div><output>0</output></div>
+            <div class="bar-row"><span>1 star</span><div class="bar" style="--v:0%"><i></i></div><output>0</output></div>
+          </section>
+          <section class="card on-band" aria-labelledby="c-like" style="padding:32px">
+            <p class="overline" id="c-like">How much did the character feel like “you”?</p>
+            <p class="big"><b>3.36</b><span>out of 5, the lowest score</span></p>
+            <div class="bar-row"><span>5</span><div class="bar orange" style="--v:23.5%"><i></i></div><output>4</output></div>
+            <div class="bar-row"><span>4</span><div class="bar orange" style="--v:47%"><i></i></div><output>8</output></div>
+            <div class="bar-row"><span>3</span><div class="bar orange" style="--v:100%"><i></i></div><output>17</output></div>
+            <div class="bar-row"><span>2</span><div class="bar orange" style="--v:23.5%"><i></i></div><output>4</output></div>
+            <div class="bar-row"><span>1</span><div class="bar orange" style="--v:0%"><i></i></div><output>0</output></div>
+            <p class="small">6 of 33 comments asked for the character to look more like the visitor.</p>
+          </section>
+        </div>
+
+        <div class="grid cols-3">
+          <section class="card on-band">
+            <p class="overline">How did the wait feel?</p>
+            <div class="bar-row"><span>About right</span><div class="bar" style="--v:100%"><i></i></div><output>20</output></div>
+            <div class="bar-row"><span>Shorter than expected</span><div class="bar" style="--v:50%"><i></i></div><output>10</output></div>
+            <div class="bar-row"><span>A bit too long</span><div class="bar" style="--v:15%"><i></i></div><output>3</output></div>
+            <p class="small">91% found the wait right or shorter than expected.</p>
+          </section>
+          <section class="card on-band">
+            <p class="overline">How should the kiosk send your picture?</p>
+            <div class="bar-row"><span>QR code, instant download</span><div class="bar" style="--v:100%"><i></i></div><output>19</output></div>
+            <div class="bar-row"><span>Printed postcard</span><div class="bar" style="--v:57.9%"><i></i></div><output>11</output></div>
+            <div class="bar-row"><span>Other (email, clip, several)</span><div class="bar" style="--v:15.8%"><i></i></div><output>3</output></div>
+          </section>
+          <section class="card on-band">
+            <p class="overline">Would you mention it to others?</p>
+            <div class="bar-row"><span>Definitely</span><div class="bar" style="--v:100%"><i></i></div><output>17</output></div>
+            <div class="bar-row"><span>Probably</span><div class="bar" style="--v:88.2%"><i></i></div><output>15</output></div>
+            <div class="bar-row"><span>Probably not</span><div class="bar" style="--v:5.9%"><i></i></div><output>1</output></div>
+            <p class="small">97% would mention it.</p>
+          </section>
+        </div>
+
+        <section class="card on-band">
+          <p class="overline">If we could improve only one thing</p>
+          <div class="bar-row"><span>More roles and characters</span><div class="bar" style="--v:100%"><i></i></div><output>13</output></div>
+          <div class="bar-row"><span>More scenes</span><div class="bar" style="--v:53.8%"><i></i></div><output>7</output></div>
+          <div class="bar-row"><span>Quizzes and fun facts</span><div class="bar" style="--v:53.8%"><i></i></div><output>7</output></div>
+          <div class="bar-row"><span>Movement and animation</span><div class="bar" style="--v:30.8%"><i></i></div><output>4</output></div>
+          <div class="bar-row"><span>Better likeness or realism</span><div class="bar" style="--v:15.4%"><i></i></div><output>2</output></div>
+        </section>
+
+        <section class="card ink" style="padding:36px" aria-labelledby="ueq-title">
+          <p class="overline" id="ueq-title" style="color:var(--orange)">User experience (UEQ-S, 29 responses, scale −3 to +3)</p>
+          <div class="ueq">
+            <div><b>2.03</b><span class="strong">Overall</span><div class="scale" style="--v:83.8%"><i></i></div></div>
+            <div><b>2.23</b><span class="strong">Pragmatic quality</span><div class="scale" style="--v:87.2%"><i></i></div></div>
+            <div><b>1.82</b><span class="strong">Hedonic quality</span><div class="scale" style="--v:80.3%"><i></i></div></div>
+          </div>
+          <p class="small">Values above 0.8 count as a positive evaluation. According to the UEQ benchmark, these results fall in the top 10% of evaluated products. Pragmatic quality means clear and easy to use; hedonic quality means enjoyable and innovative. Figures from our project report.</p>
+        </section>
+
+        <div class="stack-sm">
+          <h3 class="h3">In their words</h3>
+          <div class="grid cols-3">
+            <blockquote class="quote"><p class="overline">Loved</p><p>“The different characters had different environments.”</p></blockquote>
+            <blockquote class="quote"><p class="overline">Loved</p><p>“Very smooth, seamless interaction and original idea!”</p></blockquote>
+            <blockquote class="quote"><p class="overline">Loved</p><p>“The generation wasn’t picture perfect, and that made it even funnier!”</p></blockquote>
+          </div>
+          <div class="grid cols-3">
+            <blockquote class="quote"><p class="overline alt">Could be better</p><p>“I felt like AI made me look different from the photo I took and it threw me off a little bit.”</p></blockquote>
+            <blockquote class="quote"><p class="overline alt">Could be better</p><p>“Maybe the waiting for it to be generated.”</p></blockquote>
+            <blockquote class="quote"><p class="overline alt">Could be better</p><p>“Not being able to move around the scene.”</p></blockquote>
+          </div>
+        </div>
+
+        <section class="card red" style="padding:32px 40px">
+          <p class="overline">Worth knowing, from our report</p>
+          <p><span class="strong">Survey bias.</span> Engaged visitors stayed to talk and were more likely to fill in the survey, so the ratings may be higher than for everyone who tried it.</p>
+          <p><span class="strong">Not everyone likes it.</span> One visitor said they dislike AI changing their picture, whatever the quality.</p>
+          <p><span class="strong">AI can surprise.</span> During testing, one generated character was missing clothing on the lower body, which was awkward for the visitor and their family. We strengthened the prompts straight away. A public installation would need more safeguards.</p>
+        </section>
+      </div>
+    </section>
+
+    <!-- PILOT + NEXT -->
+    <section class="section" aria-labelledby="next-title">
+      <div class="wrap stack">
+        <div class="stack-sm">
+          <p class="overline">Looking back and forward</p>
+          <h2 class="h2" id="next-title">What the pilot said, and what the exhibition showed</h2>
+        </div>
+        <div class="grid cols-2">
+          <section class="card" style="padding:32px">
+            <p class="overline">Before: the pilot</p>
+            <p class="small">A small pilot said the experience was fun but the wait felt long, so we weighed two paths.</p>
+            <div class="card on-band" style="padding:14px 18px;border-radius:16px"><p class="strong">Path A · Make the wait shorter</p><p class="small">Move generation to cloud hardware.</p></div>
+            <div class="card on-band" style="padding:14px 18px;border-radius:16px"><p class="strong">Path B · Make the wait fun</p><p class="small">Fill the wait with quizzes and fun facts about Gothenburg.</p></div>
+          </section>
+          <section class="card red" style="padding:32px">
+            <p class="overline">After: the exhibition</p>
+            <p>At the exhibition only 3 of 33 visitors found the wait too long, and 7 of 33 picked quizzes as their top improvement. More roles (13 of 33) and a better likeness mattered more. Together this suggests the wait was no longer the main problem.</p>
+            <p class="small">My reading of the survey, not a team decision.</p>
+          </section>
+        </div>
+        <section class="card ink" style="padding:36px 40px">
+          <p class="overline" style="color:var(--orange)">If we kept going</p>
+          <ul class="list-dots">
+            <li>Add more roles and characters, the most requested change.</li>
+            <li>Improve how much the character looks like the visitor.</li>
+            <li>Add more scenes, and let visitors choose their own context.</li>
+            <li>Test the setup: an on-site kiosk or iPad against visitors using their own phones.</li>
+            <li>Shorten generation time and add quizzes or fun facts to the wait.</li>
+            <li>Add safeguards for unpredictable AI output before any public deployment.</li>
+          </ul>
+        </section>
+      </div>
+    </section>
+
+    <!-- REFLECTION -->
+    <section class="section band" aria-labelledby="reflect-title">
+      <div class="wrap stack">
+        <div class="stack-sm">
+          <p class="overline">Reflection</p>
+          <h2 class="h2" id="reflect-title">What I took away</h2>
+        </div>
+        <div class="grid cols-3">
+          <div class="card on-band" style="padding:32px"><p class="overline">1</p><h3 class="h3">A constraint can be the brief</h3><p class="small">The limited lift capacity became the whole experience, and 91% found the wait fine.</p></div>
+          <div class="card on-band" style="padding:32px"><p class="overline">2</p><h3 class="h3">Delight carries a rough prototype</h3><p class="small">Visitors laughed at imperfect results, but likeness was the weakest score at 3.36 out of 5.</p></div>
+          <div class="card on-band" style="padding:32px"><p class="overline">3</p><h3 class="h3">Test in the real place</h3><p class="small">The exhibition showed what the pilot didn’t: the wait wasn’t the problem, the characters were.</p></div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="site">
+    <p>Group 3 · Ao Wang · Chloe Lu · Mengting Wang · Yuxi Guo</p>
+    <p class="h2">Thanks for reading</p>
+    <a class="btn" href="../index.html#projects">Back to portfolio</a>
+  </footer>
+
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>
