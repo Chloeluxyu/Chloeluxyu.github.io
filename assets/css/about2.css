@@ -85,7 +85,7 @@
 @media (prefers-reduced-motion: reduce) { .int-stage .disc svg { animation: none; } .carousel.in { animation: none; } .c-track { scroll-behavior: auto; } .int .ico { transition: none; } }
 
 /* click-to-enlarge */
-.c-track img { cursor: zoom-in; }
+.c-track img[data-zoom] { cursor: zoom-in; }
 .c-track img:focus-visible { outline: 3px solid var(--pink-deep); outline-offset: 3px; }
 .lightbox { position: fixed; inset: 0; z-index: 200; background: rgba(38,33,31,.9); display: grid; place-items: center; padding: 24px; cursor: zoom-out; }
 .lightbox[hidden] { display: none; }

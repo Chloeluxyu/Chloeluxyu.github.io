@@ -81,8 +81,10 @@
         fig.classList.add('is-video'); fig.appendChild(v);
       } else {
         const img = document.createElement('img');
-        img.src = base + '.jpg'; img.alt = label; img.tabIndex = 0; img.title = 'Click to enlarge';
-        img.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); img.click(); } });
+        img.src = base + '.jpg'; img.alt = label;
+        // Only the project pictures (building stuff) can be enlarged, not the personal photos.
+        if (multi) { img.dataset.zoom = '1'; img.tabIndex = 0; img.title = 'Click to enlarge';
+          img.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); img.click(); } }); }
         img.loading = i > 3 ? 'lazy' : 'eager'; img.decoding = 'async';
         img.addEventListener('load', () => { if (img.naturalHeight < 450) img.style.height = Math.min(400, img.naturalHeight * 2) + 'px'; update(); });
         img.dataset.label = LABELS[key + '-' + n] || '';
@@ -128,7 +130,7 @@
   const lbOpen = (img) => { lbOpener = img; lbImg.src = img.src; lbImg.alt = img.alt; lbCap.textContent = img.dataset.label || ''; lbCap.hidden = !img.dataset.label; lb.hidden = false; document.body.style.overflow = 'hidden'; lbClose.focus(); };
   const lbShut = () => { lb.hidden = true; lbImg.removeAttribute('src'); document.body.style.overflow = ''; if (lbOpener) lbOpener.focus && lbOpener.focus(); };
   if (lb) {
-    track.addEventListener('click', (e) => { const img = e.target.closest('img'); if (img && track.contains(img)) lbOpen(img); });
+    track.addEventListener('click', (e) => { const img = e.target.closest('img'); if (img && img.dataset.zoom && track.contains(img)) lbOpen(img); });
     lb.addEventListener('click', lbShut);
     lbClose.addEventListener('click', (e) => { e.stopPropagation(); lbShut(); });
   }
