@@ -1,0 +1,53 @@
+/* Case-study chrome shared with the homepage: fonts, nav, "more projects", footer.
+   Loads LAST so it overrides site.css / rr.css / eventi.css typography.
+   Each project keeps its own colour palette (tokens set in its own css). */
+:root {
+  --font: "DM Sans", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --font-display: "Bagel Fat One", "DM Sans", system-ui, sans-serif;
+  --serif: var(--font-display);
+}
+body { font-family: var(--font); }
+.h1, .h2 { font-family: var(--font-display); font-weight: 400; letter-spacing: -0.01em; }
+.h1 { line-height: 1.05; }
+.h3 { font-family: var(--font); font-weight: 700; }
+.overline { font-weight: 700; }
+.btn { font-weight: 700; }
+
+/* nav (same as homepage) */
+.nav { padding-block: 28px; }
+.nav .brand { font-family: var(--font-display); font-weight: 400; font-size: 26px; line-height: 1; white-space: nowrap; }
+.nav ul { gap: 34px; align-items: center; }
+.nav .resume { padding: 8px 16px; border-radius: 999px; background: var(--ink); color: var(--paper); }
+.nav .resume:hover { background: var(--red); color: #fff; }
+
+/* more projects */
+.more-projects { padding-block: clamp(56px, 7vw, 88px); background: var(--paper-deep); }
+.more-projects .h2 { margin: 6px 0 28px; font-size: clamp(30px, 3.6vw, 42px); }
+.mp-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 24px; }
+.mp { display: grid; grid-template-columns: 42% 1fr; background: var(--paper); border-radius: 24px; overflow: hidden; text-decoration: none; transition: transform .25s ease, box-shadow .25s ease; }
+.mp:hover { transform: translateY(-5px); box-shadow: 0 24px 38px -26px rgba(0,0,0,.5); }
+.mp img { width: 100%; height: 100%; object-fit: cover; min-height: 150px; }
+.mp div { padding: 20px 22px; display: grid; gap: 4px; align-content: center; }
+.mp small { font-size: 12px; font-weight: 700; letter-spacing: .1em; text-transform: uppercase; color: var(--red); }
+.mp b { font-family: var(--font-display); font-weight: 400; font-size: 24px; line-height: 1.2; }
+.mp span { font-weight: 700; color: var(--red); font-size: 15px; }
+
+/* footer */
+footer.site { padding-block: 72px 52px; gap: 16px; }
+footer.site .h2 { font-size: clamp(32px, 4vw, 46px); }
+footer.site .credit { margin: 0; color: var(--paper-deep); font-size: 15px; opacity: .85; }
+footer.site .links { display: flex; gap: 24px; flex-wrap: wrap; justify-content: center; }
+footer.site .links a { color: inherit; }
+footer.site small { opacity: .7; margin-top: 12px; }
+
+@media (max-width: 1000px) {
+  .mp-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 640px) {
+  .nav .brand { font-size: 22px; }
+  .nav ul { gap: 14px; }
+  .nav ul li:nth-child(2), .nav ul li:nth-child(4) { display: none; }
+  .mp { grid-template-columns: 1fr; }
+  .mp img { aspect-ratio: 16/9; height: auto; }
+}
+@media (prefers-reduced-motion: reduce) { .mp { transition: none; } }
