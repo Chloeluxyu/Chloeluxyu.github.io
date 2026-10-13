@@ -52,9 +52,9 @@ section[id] { scroll-margin-top: 24px; }
 .stage .disc { position: absolute; left: 0; right: 0; bottom: 8px; aspect-ratio: 1; border-radius: 50%; background: var(--pink-soft); }
 .stage .me { position: absolute; left: 50%; bottom: 0; width: 89%; transform: translateX(-50%); height: auto; }
 .sticker { position: absolute; padding: 8px 16px; border-radius: 999px; font-size: 14px; font-weight: 500; box-shadow: 0 6px 14px rgba(38,33,31,.12); white-space: nowrap; animation: floaty 6s ease-in-out infinite; }
-.s1 { left: -4%; top: 38%; background: var(--sage-soft); --r: -6deg; }
+.s1 { left: -20%; top: 56%; background: var(--sage-soft); --r: -6deg; }
 .s2 { right: 0; top: 16%; background: var(--pink-soft); --r: 7deg; animation-delay: -2s; }
-.s3 { right: -6%; top: 46%; background: var(--butter); --r: -4deg; animation-delay: -4s; }
+.s3 { right: -12%; top: 44%; background: var(--butter); --r: -4deg; animation-delay: -4s; }
 @keyframes floaty { 0%,100% { transform: translateY(0) rotate(var(--r)); } 50% { transform: translateY(-9px) rotate(var(--r)); } }
 .spark { position: absolute; width: 44px; color: var(--pink); will-change: transform; }
 .spark.a { left: 12%; top: 6%; } .spark.b { right: 4%; top: 64%; width: 28px; color: var(--sage); }
