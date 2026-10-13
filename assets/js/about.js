@@ -9,8 +9,8 @@
         desc: 'A disco-dressed robot that demonstrates exercises during study breaks. In a study with 22 students, those who saw it move reported being more active (4.0 vs 2.8 out of 5) and rated the experience higher. The sample was small, so we treat it as a signal, not proof. My part: I wrote the code, found and 3D-printed the robot body, moderated most sessions and analysed the UEQ-S results.' },
       { name: 'Social tamagotchi', files: [19,20,21,1,22,23],
         desc: 'A tamagotchi-like pendant: you set your interests, and when you pass someone with the same ones it sounds and notifies you, so you can start a conversation at university social events.' },
-      { name: 'IKEA VAPPEBY redesign', files: [15,2,4,6,9,13],
-        desc: 'A circular redesign of the IKEA VAPPEBY speaker, so it is easier to repair, maintain and recycle.' }
+      { name: 'IKEA VAPPEBY redesign', files: [25,26,27,28,15,2,4,6,9,13],
+        desc: 'A course project in collaboration with IKEA, who sponsored the product, lectured us on their sustainability strategy and their responsible team took part of our final exhibition and gave positive feedback. We mainly redesigned the VAPPEBY speaker so it is easier to repair, maintain and recycle, using LCA, a disassembly workshop and sustainable product design methods. A battery rental service is part of that strategy, and I designed its web pages inside IKEA’s existing site layout.' }
     ] },
     matcha:        { title: 'Matcha',        n: 9,  alt: 'Matcha and café moments' },
     music:         { title: 'Music',         n: 6,  alt: 'Playing and watching music' },
@@ -22,6 +22,8 @@
   };
   // Slots that are videos, not photos: 'key-n' -> assets/interests/key-n.mp4 (the .jpg is the poster frame).
   const VIDEOS = new Set(['building-17']);
+  // Small corner labels on specific pictures.
+  const LABELS = { 'building-25': 'AI-generated mockup', 'building-26': 'AI-generated mockup' };
   const panel = document.getElementById('carousel');
   if (!panel) return;
   const track = document.getElementById('c-track'), title = document.getElementById('c-title'), count = document.getElementById('c-count');
@@ -79,10 +81,13 @@
         fig.classList.add('is-video'); fig.appendChild(v);
       } else {
         const img = document.createElement('img');
-        img.src = base + '.jpg'; img.alt = label;
+        img.src = base + '.jpg'; img.alt = label; img.tabIndex = 0; img.title = 'Click to enlarge';
+        img.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); img.click(); } });
         img.loading = i > 3 ? 'lazy' : 'eager'; img.decoding = 'async';
         img.addEventListener('load', () => { if (img.naturalHeight < 450) img.style.height = Math.min(400, img.naturalHeight * 2) + 'px'; update(); });
+        img.dataset.label = LABELS[key + '-' + n] || '';
         fig.appendChild(img);
+        if (LABELS[key + '-' + n]) { const b = document.createElement('span'); b.className = 'pic-label'; b.textContent = LABELS[key + '-' + n]; fig.appendChild(b); fig.classList.add('labeled'); }
       }
       track.appendChild(fig);
     });
@@ -117,7 +122,18 @@
   track.addEventListener('load', update, true);
   window.addEventListener('resize', update);
   panel.querySelector('.c-close').addEventListener('click', close);
+  // Click a photo to enlarge it (screens and sketches are hard to read at carousel size).
+  const lb = document.getElementById('lightbox'), lbImg = lb && lb.querySelector('img'), lbClose = lb && lb.querySelector('.lb-close'), lbCap = lb && lb.querySelector('.lb-cap');
+  let lbOpener = null;
+  const lbOpen = (img) => { lbOpener = img; lbImg.src = img.src; lbImg.alt = img.alt; lbCap.textContent = img.dataset.label || ''; lbCap.hidden = !img.dataset.label; lb.hidden = false; document.body.style.overflow = 'hidden'; lbClose.focus(); };
+  const lbShut = () => { lb.hidden = true; lbImg.removeAttribute('src'); document.body.style.overflow = ''; if (lbOpener) lbOpener.focus && lbOpener.focus(); };
+  if (lb) {
+    track.addEventListener('click', (e) => { const img = e.target.closest('img'); if (img && track.contains(img)) lbOpen(img); });
+    lb.addEventListener('click', lbShut);
+    lbClose.addEventListener('click', (e) => { e.stopPropagation(); lbShut(); });
+  }
   document.addEventListener('keydown', (e) => {
+    if (lb && !lb.hidden) { if (e.key === 'Escape') lbShut(); return; }
     if (panel.hidden) return;
     if (e.key === 'Escape') close();
     else if (e.key === 'ArrowRight') { e.preventDefault(); go(1); }
