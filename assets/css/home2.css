@@ -132,7 +132,7 @@ section[id] { scroll-margin-top: 24px; }
 @media (max-width: 640px) {
   body { font-size: 16px; }
   .nav .brand { white-space: nowrap; font-size: 22px; }
-  .nav ul { gap: 14px; } .nav ul li:nth-child(2), .nav ul li:nth-child(4) { display: none; }
+  .nav ul { gap: 14px; }
   .hi { display: none; }
   .s1 { left: -2%; top: 70%; } .s2 { right: 2%; top: 8%; }
   .steps { grid-template-columns: 1fr; }

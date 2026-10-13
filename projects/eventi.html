@@ -23,6 +23,7 @@
   <link rel="stylesheet" href="../assets/css/site.css">
   <link rel="stylesheet" href="../assets/css/eventi.css">
   <link rel="stylesheet" href="../assets/css/cs-shared.css">
+  <link rel="stylesheet" href="../assets/css/nav.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -38,10 +39,11 @@
       </ul>
     </nav>
   </header>
+  <nav class="chapters" aria-label="Sections on this page"><div class="chapters-in"><a href="#overview">Overview</a><a href="#my-role">My role</a><a href="#research">Research</a><a href="#requirements">Requirements</a><a href="#screens">Screens</a><a href="#shipped">Shipped</a><a href="#components">Components</a><a href="#takeaways">Takeaways</a></div></nav>
 
   <main id="main">
     <!-- HERO -->
-    <section class="wrap hero" aria-labelledby="title">
+    <section id="overview" class="wrap hero" aria-labelledby="title">
       <div class="hero-text">
         <span class="tag" style="justify-self:start">Web app · Team project · Design to code</span>
         <h1 class="h1" id="title">Eventi</h1>
@@ -70,7 +72,7 @@
     </section>
 
     <!-- MY CONTRIBUTION -->
-    <section class="section" aria-labelledby="mine-title">
+    <section id="my-role" class="section" aria-labelledby="mine-title">
       <div class="wrap stack">
         <div class="stack-sm"><p class="overline">My contribution</p><h2 class="h2" id="mine-title">Designed the account and calendar side, then helped build it</h2></div>
         <div class="mine">
@@ -99,7 +101,7 @@
     </section>
 
     <!-- INSPIRATION -->
-    <section class="section band" aria-labelledby="insp-title">
+    <section id="research" class="section band" aria-labelledby="insp-title">
       <div class="wrap stack">
         <div class="stack-sm"><p class="overline">Research</p><h2 class="h2" id="insp-title">Learning from what already works</h2><p class="lead">Before drawing anything, I collected screens from other event products and wrote down what each one did well.</p></div>
         <div class="insp">
@@ -114,7 +116,7 @@
     </section>
 
     <!-- REQUIREMENTS + DECISIONS -->
-    <section class="section" aria-labelledby="req-title">
+    <section id="requirements" class="section" aria-labelledby="req-title">
       <div class="wrap stack">
         <div class="stack-sm"><p class="overline">Define</p><h2 class="h2" id="req-title">What each page needs to do</h2><p class="lead">We wrote the content for every page before designing it, so developers and designers worked from the same list.</p></div>
         <div class="req">
@@ -134,7 +136,7 @@
     </section>
 
     <!-- DESIGN SCREENS -->
-    <section class="section band" aria-labelledby="des-title">
+    <section id="screens" class="section band" aria-labelledby="des-title">
       <div class="wrap stack">
         <div class="stack-sm"><p class="overline">Design</p><h2 class="h2" id="des-title">The screens I designed</h2></div>
         <div class="gallery-e">
@@ -155,7 +157,7 @@
     </section>
 
     <!-- DESIGN VS BUILT -->
-    <section class="section" aria-labelledby="built-title">
+    <section id="shipped" class="section" aria-labelledby="built-title">
       <div class="wrap stack">
         <div class="stack-sm"><p class="overline">From design to product</p><h2 class="h2" id="built-title">What shipped</h2><p class="lead">The running app follows the designs closely. The built version added real event artwork, colour-coded calendar chips and a dark mode.</p></div>
         <div class="compare">
@@ -178,7 +180,7 @@
     </section>
 
     <!-- SYSTEM -->
-    <section class="section band" aria-labelledby="sys-title">
+    <section id="components" class="section band" aria-labelledby="sys-title">
       <div class="wrap stack">
         <div class="stack-sm"><p class="overline">Design system</p><h2 class="h2" id="sys-title">A small set of components</h2><p class="lead">Navigation, search bar, RSVP, heart, event-type tags and event cards were built once in Figma, so every page used the same pieces.</p></div>
         <div class="win"><img src="../assets/eventi/fig-components.jpg" alt="The Eventi component library in Figma" loading="lazy"></div>
@@ -193,7 +195,7 @@
     </section>
 
     <!-- REFLECTION -->
-    <section class="section" aria-labelledby="refl-title">
+    <section id="takeaways" class="section" aria-labelledby="refl-title">
       <div class="wrap stack">
         <div class="stack-sm"><p class="overline">Reflection</p><h2 class="h2" id="refl-title">What I took away, and what’s next</h2></div>
         <div class="grid cols-3">
@@ -227,5 +229,7 @@
     <div class="links"><a href="mailto:chloeluxyu@gmail.com">chloeluxyu@gmail.com</a><a href="https://www.linkedin.com/in/chloe-l-699b5a232/" target="_blank" rel="noopener">LinkedIn</a><a href="../index.html#projects">All projects</a></div>
     <small>© 2026 Chloe Lu</small>
   </footer>
+  <script src="../assets/js/nav.js" defer></script>
+  <script src="../assets/js/chapters.js" defer></script>
 </body>
 </html>

@@ -24,6 +24,7 @@
   <link rel="stylesheet" href="../assets/css/site.css">
   <link rel="stylesheet" href="../assets/css/rr.css">
   <link rel="stylesheet" href="../assets/css/cs-shared.css">
+  <link rel="stylesheet" href="../assets/css/nav.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -40,11 +41,12 @@
       </ul>
     </nav>
   </header>
+  <nav class="chapters" aria-label="Sections on this page"><div class="chapters-in"><a href="#overview">Overview</a><a href="#my-role">My role</a><a href="#the-app">The app</a><a href="#process">Process</a><a href="#research">Research</a><a href="#ideation">Ideation</a><a href="#design">Design</a><a href="#testing">Testing</a><a href="#system">System</a><a href="#takeaways">Takeaways</a></div></nav>
 
   <main id="main">
 
     <!-- HERO -->
-    <section class="wrap hero" aria-labelledby="title">
+    <section id="overview" class="wrap hero" aria-labelledby="title">
       <div class="hero-text">
         <span class="tag" style="justify-self:start;background:var(--red-container);color:var(--on-primary-container)">Mobile app · UX/UI design</span>
         <h1 class="h1" id="title">Recycle Ready</h1>
@@ -103,7 +105,7 @@
     </section>
 
     <!-- MY CONTRIBUTION -->
-    <section class="section contrib" aria-labelledby="mine-title" style="padding-top:0">
+    <section id="my-role" class="section contrib" aria-labelledby="mine-title" style="padding-top:0">
       <div class="wrap stack-sm">
         <p class="overline" id="mine-title">My contribution</p>
         <div class="grid cols-2" style="align-items:stretch">
@@ -155,7 +157,7 @@
     </section>
 
     <!-- FINAL DESIGN -->
-    <section class="section" aria-labelledby="final-title">
+    <section id="the-app" class="section" aria-labelledby="final-title">
       <div class="wrap stack">
         <div class="stack-sm">
           <p class="overline">The redesigned app</p>
@@ -189,7 +191,7 @@
     </section>
 
     <!-- PROCESS -->
-    <section class="section" aria-labelledby="proc-title">
+    <section id="process" class="section" aria-labelledby="proc-title">
       <div class="wrap stack">
         <div class="stack-sm"><p class="overline">How we got here</p><h2 class="h2" id="proc-title">Four steps, each one with users</h2><p class="lead">Skim the outcomes, or read each phase below.</p></div>
         <div class="process-steps">
@@ -202,7 +204,7 @@
     </section>
 
     <!-- 01 RESEARCH -->
-    <section class="section band" aria-labelledby="res-title">
+    <section id="research" class="section band" aria-labelledby="res-title">
       <div class="wrap stack">
         <div class="stack-sm">
           <p class="overline">01 · Research</p>
@@ -239,7 +241,7 @@
     </section>
 
     <!-- 02 IDEATION -->
-    <section class="section band-white" aria-labelledby="ide-title">
+    <section id="ideation" class="section band-white" aria-labelledby="ide-title">
       <div class="wrap stack">
         <div class="stack-sm">
           <p class="overline">02 · Ideation</p>
@@ -283,14 +285,14 @@
     </section>
 
     <!-- 03 DESIGN -->
-    <section class="section" aria-labelledby="des-title">
+    <section id="design" class="section" aria-labelledby="des-title">
       <div class="wrap stack">
         <div class="stack-sm">
           <p class="overline">03 · Design</p>
           <h2 class="h2" id="des-title">Letting users draw the app</h2>
           <p class="lead">Three participants, aged 20, 26 and 38, each sketched their own version of the app on paper from a scenario. We looked for what their drawings had in common.</p>
         </div>
-        <div class="two-col session">
+        <div class="two-col session" data-collapse="Show full session">
           <div class="surface">
             <h3 class="h3">The session</h3>
             <p class="overline" style="color:var(--ink-soft)">Participants</p><p class="small" style="color:var(--ink)">3: one environmentally conscious, two “ordinary” young people</p>
@@ -331,7 +333,7 @@
     </section>
 
     <!-- 04 TESTING -->
-    <section class="section band-white" aria-labelledby="test-title">
+    <section id="testing" class="section band-white" aria-labelledby="test-title">
       <div class="wrap stack">
         <div class="stack-sm">
           <p class="overline">04 · Testing</p>
@@ -359,7 +361,7 @@
           <div class="vote-row"><span class="strong">Scanning</span><span class="segs" aria-hidden="true"><i class="seg"></i><i class="seg p2"></i><i class="seg p2"></i></span><output>Prototype 2 · 2 of 3</output></div>
         </section>
 
-        <div class="two-col">
+        <div class="two-col" data-collapse="Show all quotes">
           <div class="quotes">
             <h3 class="h3">In their words</h3>
             <blockquote>“It’s harder to know what the thumbs-up button does on prototype 1 before you press it.”</blockquote>
@@ -394,7 +396,7 @@
           </div>
         </div>
 
-        <div class="table seminar" role="table" aria-label="Demo seminar feedback and its status">
+        <div class="table seminar" data-collapse="Show all feedback" role="table" aria-label="Demo seminar feedback and its status">
           <div style="padding:28px 32px 10px"><h3 class="h3">After the demo seminar</h3><p class="small">The seminar gave a second round of outside feedback. Here is where each point stands.</p></div>
           <div class="t-row"><span>Filter the map by material</span><span class="status">In the app</span></div>
           <div class="t-row"><span>Reward people more for travelling to a farther station</span><span class="status">In the app</span></div>
@@ -410,7 +412,7 @@
     </section>
 
     <!-- DESIGN SYSTEM -->
-    <section class="section" aria-labelledby="ds-title">
+    <section id="system" class="section" aria-labelledby="ds-title">
       <div class="wrap stack">
         <div class="stack-sm"><p class="overline">Design system</p><h2 class="h2" id="ds-title">A small system keeps it consistent</h2></div>
         <div class="grid cols-3">
@@ -448,7 +450,7 @@
     </section>
 
     <!-- REFLECTION -->
-    <section class="section band" aria-labelledby="refl-title">
+    <section id="takeaways" class="section band" aria-labelledby="refl-title">
       <div class="wrap stack">
         <div class="stack-sm"><p class="overline">Reflection</p><h2 class="h2" id="refl-title">What I took away</h2></div>
         <div class="grid cols-3">
@@ -482,5 +484,7 @@
     <div class="links"><a href="mailto:chloeluxyu@gmail.com">chloeluxyu@gmail.com</a><a href="https://www.linkedin.com/in/chloe-l-699b5a232/" target="_blank" rel="noopener">LinkedIn</a><a href="../index.html#projects">All projects</a></div>
     <small>© 2026 Chloe Lu</small>
   </footer>
+  <script src="../assets/js/nav.js" defer></script>
+  <script src="../assets/js/chapters.js" defer></script>
 </body>
 </html>

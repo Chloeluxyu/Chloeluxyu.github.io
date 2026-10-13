@@ -1,0 +1,22 @@
+/* Shared mobile menu. Without JS the links simply wrap; with JS (class .has-js) they sit in a dropdown. */
+.nav { position: relative; }
+.nav-toggle { display: none; all: unset; box-sizing: border-box; cursor: pointer; width: 46px; height: 46px; border-radius: 50%; border: 2px solid var(--ink, #26211f); display: none; place-items: center; align-content: center; justify-items: center; gap: 4px; }
+.nav-toggle span { display: block; width: 18px; height: 2px; border-radius: 2px; background: var(--ink, #26211f); transition: transform .2s ease, opacity .2s ease; }
+.nav-toggle:focus-visible { outline: 3px solid var(--pink-deep, var(--red, #a5506a)); outline-offset: 3px; }
+.nav.open .nav-toggle span:nth-child(1) { transform: translateY(6px) rotate(45deg); }
+.nav.open .nav-toggle span:nth-child(2) { opacity: 0; }
+.nav.open .nav-toggle span:nth-child(3) { transform: translateY(-6px) rotate(-45deg); }
+
+@media (max-width: 760px) {
+  .nav { gap: 12px; }
+  .nav ul { flex-wrap: wrap; gap: 6px 16px; justify-content: flex-end; }
+  .nav.has-js .nav-toggle { display: grid; }
+  .nav.has-js ul { display: none; position: absolute; right: 0; top: calc(100% - 8px); z-index: 80; flex-direction: column; flex-wrap: nowrap; align-items: stretch; gap: 2px; min-width: 230px; padding: 10px; background: #fff; border-radius: 22px; box-shadow: 0 24px 50px -20px rgba(38,33,31,.45); border: 1px solid rgba(38,33,31,.08); }
+  .nav.has-js.open ul { display: flex; }
+  .nav.has-js ul li { display: block; }
+  .nav.has-js ul a { display: block; padding: 13px 16px; border-radius: 14px; font-size: 16px; color: var(--ink, #26211f); }
+  .nav.has-js ul a:hover, .nav.has-js ul a[aria-current="page"] { background: var(--pink-soft, #f4e1e4); color: var(--ink, #26211f); }
+  .nav.has-js ul .resume { margin-top: 6px; text-align: center; background: var(--ink, #26211f); color: #fff; }
+  .nav.has-js ul .resume:hover { background: var(--pink-deep, var(--red, #a5506a)); color: #fff; }
+}
+@media (prefers-reduced-motion: reduce) { .nav-toggle span { transition: none; } }

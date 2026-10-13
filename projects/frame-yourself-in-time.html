@@ -23,6 +23,7 @@
   <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="../assets/css/site.css">
   <link rel="stylesheet" href="../assets/css/cs-shared.css">
+  <link rel="stylesheet" href="../assets/css/nav.css">
 </head>
 <body>
   <a class="skip" href="#main">Skip to content</a>
@@ -39,11 +40,12 @@
       </ul>
     </nav>
   </header>
+  <nav class="chapters" aria-label="Sections on this page"><div class="chapters-in"><a href="#overview">Overview</a><a href="#my-role">My role</a><a href="#concept">Concept</a><a href="#pivot">Pivot</a><a href="#scenes">Scenes</a><a href="#kiosk">Kiosk</a><a href="#how-it-works">How it works</a><a href="#evaluation">Evaluation</a><a href="#next-steps">Next steps</a><a href="#takeaways">Takeaways</a></div></nav>
 
   <main id="main">
 
     <!-- HERO -->
-    <section class="wrap hero" aria-labelledby="title">
+    <section id="overview" class="wrap hero" aria-labelledby="title">
       <div class="hero-text">
         <span class="tag" style="justify-self:start">Interactive installation · Generative AI</span>
         <h1 class="h1" id="title">Frame Yourself in Time</h1>
@@ -74,7 +76,7 @@
     </section>
 
     <!-- MY CONTRIBUTION -->
-    <section class="section" aria-labelledby="mine-title" style="padding-bottom:0">
+    <section id="my-role" class="section" aria-labelledby="mine-title" style="padding-bottom:0">
       <div class="wrap stack-sm">
         <p class="overline" id="mine-title">My contribution</p>
         <div class="grid cols-4">
@@ -112,7 +114,7 @@
           <h2 class="h2" id="portraits-title">From a selfie to a citizen of 1861</h2>
           <p class="lead">A generative model maps each visitor onto a historical persona. One photo in, one historical citizen out.</p>
         </div>
-        <div class="grid cols-4">
+        <div class="grid cols-4 swipe-m">
           <div class="pair" style="background:var(--paper)"><div class="imgs"><img class="before" src="../assets/fyit/scand-man-before.jpg" alt="Visitor photo, before"><img class="after" src="../assets/fyit/scand-man-after.jpg" alt="Generated historical character, after"></div><div class="labels"><span>Before</span><span>After</span></div></div>
           <div class="pair" style="background:var(--paper)"><div class="imgs"><img class="before" src="../assets/fyit/scand-woman-before.jpg" alt="Visitor photo, before"><img class="after" src="../assets/fyit/scand-woman-after.jpg" alt="Generated historical character, after"></div><div class="labels"><span>Before</span><span>After</span></div></div>
           <div class="pair" style="background:var(--paper)"><div class="imgs"><img class="before" src="../assets/fyit/asian-man-before.jpg" alt="Visitor photo, before"><img class="after" src="../assets/fyit/asian-man-after.jpg" alt="Generated historical character, after"></div><div class="labels"><span>Before</span><span>After</span></div></div>
@@ -122,7 +124,7 @@
     </section>
 
     <!-- OVERVIEW -->
-    <section class="section" aria-labelledby="overview-title">
+    <section id="concept" class="section" aria-labelledby="overview-title">
       <div class="wrap stack">
         <div class="stack-sm">
           <p class="overline">Overview</p>
@@ -155,7 +157,7 @@
         <div class="stack-sm">
           <h3 class="h3">The visitor journey, from queue to lift</h3>
           <div class="journey"><img src="../assets/fyit/user-journey.jpg" alt="Illustrated user journey from entering the waiting area to stepping into the elevator" loading="lazy"></div>
-          <div class="grid cols-5" style="margin-top:6px">
+          <div class="grid cols-5 swipe-m" style="margin-top:6px">
             <div class="step"><p class="overline">1</p><b>Enter and queue</b><p class="small">Drawn in by the living mural already playing on the wall.</p></div>
             <div class="step"><p class="overline">2</p><b>Capture</b><p class="small">A quick portrait at a compact kiosk, the only action needed.</p></div>
             <div class="step"><p class="overline">3</p><b>Synthesis</b><p class="small">A model maps your features onto a chosen historical persona.</p></div>
@@ -167,14 +169,14 @@
     </section>
 
     <!-- PIVOT -->
-    <section class="section band" aria-labelledby="pivot-title">
+    <section id="pivot" class="section band" aria-labelledby="pivot-title">
       <div class="wrap stack">
         <div class="stack-sm">
           <p class="overline">The pivot</p>
           <h2 class="h2" id="pivot-title">We started with a 3D mirror. It didn’t work.</h2>
           <p class="lead">Our first concept tracked the visitor’s body and moved a matching 3D historical avatar through a digital reconstruction of the square. Early prototype tests ruled it out.</p>
         </div>
-        <div class="grid cols-3">
+        <div class="grid cols-3 swipe-m">
           <div class="card on-band" style="padding:30px;border-radius:26px"><p class="overline">1</p><h3 class="h3">The visuals didn’t match</h3><p class="small">Three.js couldn’t reproduce the lighting and textures built in Blender, so the scene looked distorted.</p></div>
           <div class="card on-band" style="padding:30px;border-radius:26px"><p class="overline">2</p><h3 class="h3">The bodies looked wrong</h3><p class="small">Tracking data made limbs clip through the meshes, and flat 2D faces on rigid 3D bodies broke the feeling of “that’s me”.</p></div>
           <div class="card on-band" style="padding:30px;border-radius:26px"><p class="overline">3</p><h3 class="h3">It was too slow</h3><p class="small">Live 3D rendering plus body tracking caused delays, the opposite of shortening the wait.</p></div>
@@ -187,14 +189,14 @@
     </section>
 
     <!-- SCENES -->
-    <section class="section" aria-labelledby="scenes-title">
+    <section id="scenes" class="section" aria-labelledby="scenes-title">
       <div class="wrap stack">
         <div class="stack-sm">
           <p class="overline">The world</p>
           <h2 class="h2" id="scenes-title">Three living scenes</h2>
           <p class="lead">Each generated character is placed into a historical Gothenburg backdrop. The role you pick at the kiosk decides which scene you arrive in.</p>
         </div>
-        <div class="grid cols-3">
+        <div class="grid cols-3 swipe-m">
           <article class="scene">
             <video muted loop playsinline preload="none" poster="../assets/fyit/poster-gustav-adolfs-torg.jpg" aria-label="Animated scene of Gustav Adolfs Torg"><source src="../assets/fyit/gustav-adolfs-torg.mp4" type="video/mp4"></video>
             <div class="body"><p class="overline">Merchants</p><h3 class="h3">Gustav Adolfs Torg</h3><p class="small">The civic heart of 19th-century Gothenburg, busy with merchants and carriages.</p></div>
@@ -212,7 +214,7 @@
     </section>
 
     <!-- KIOSK -->
-    <section class="section band" aria-labelledby="kiosk-title">
+    <section id="kiosk" class="section band" aria-labelledby="kiosk-title">
       <div class="wrap stack">
         <div class="stack-sm">
           <p class="overline">The interface</p>
@@ -227,7 +229,7 @@
           <figure class="figure"><img src="../assets/fyit/kiosk-7.jpg" alt="Kiosk final screen reading Till Lycka in a botanical frame" loading="lazy"><figcaption><span class="overline">05</span><b>Till Lycka!</b>A gently floating logo turns the last screen into a small reward.</figcaption></figure>
         </div>
         <p class="small">The selfie and confirm screens are left out here because they show a placeholder portrait. Confirm or retake gives visitors an undo before generation starts.</p>
-        <div class="grid cols-3">
+        <div class="grid cols-3 swipe-m">
           <div class="card red"><h3 class="h3">We cut the tutorial</h3><p class="small">Testing showed the kiosk was readable without one.</p></div>
           <div class="card red"><h3 class="h3">Three roles, not six</h3><p class="small">The project’s time limit forced the choice. We’d want to grow it.</p></div>
           <div class="card red"><h3 class="h3">Short on purpose</h3><p class="small">Every second past four belongs to the elevator.</p></div>
@@ -236,7 +238,7 @@
     </section>
 
     <!-- HOW IT WORKS -->
-    <section class="section" aria-labelledby="how-title">
+    <section id="how-it-works" class="section" aria-labelledby="how-title">
       <div class="wrap stack">
         <div class="stack-sm">
           <p class="overline">Under the hood</p>
@@ -249,7 +251,7 @@
           <li class="card"><p class="overline">03</p><p class="strong">Costume synthesis</p></li>
           <li class="card"><p class="overline">04</p><p class="strong">Size normalisation</p></li>
         </ol>
-        <div class="grid cols-4">
+        <div class="grid cols-4 swipe-m">
           <div class="card outline"><p class="overline">Hardware</p><p class="small" style="color:var(--ink)">Camera kiosk and wall projection mapping</p></div>
           <div class="card outline"><p class="overline">Framework</p><p class="small" style="color:var(--ink)">Three.js and Python</p></div>
           <div class="card outline"><p class="overline">Generative core</p><p class="small" style="color:var(--ink)">ComfyUI</p></div>
@@ -283,7 +285,7 @@
     </section>
 
     <!-- EVALUATION -->
-    <section class="section band" aria-labelledby="eval-title">
+    <section id="evaluation" class="section band" aria-labelledby="eval-title">
       <div class="wrap stack">
         <div class="stack-sm">
           <p class="overline">Evaluation</p>
@@ -313,7 +315,7 @@
           </section>
         </div>
 
-        <div class="grid cols-3">
+        <div class="grid cols-3 swipe-m">
           <section class="card on-band">
             <p class="overline">How did the wait feel?</p>
             <div class="bar-row"><span>About right</span><div class="bar" style="--v:100%"><i></i></div><output>20</output></div>
@@ -355,14 +357,14 @@
           <p class="small">Values above 0.8 count as a positive evaluation. According to the UEQ benchmark, these results fall in the top 10% of evaluated products. Pragmatic quality means clear and easy to use; hedonic quality means enjoyable and innovative. Figures from our project report.</p>
         </section>
 
-        <div class="stack-sm">
+        <div class="stack-sm" data-collapse="Show all quotes">
           <h3 class="h3">In their words</h3>
-          <div class="grid cols-3">
+          <div class="grid cols-3 swipe-m">
             <blockquote class="quote"><p class="overline">Loved</p><p>“The different characters had different environments.”</p></blockquote>
             <blockquote class="quote"><p class="overline">Loved</p><p>“Very smooth, seamless interaction and original idea!”</p></blockquote>
             <blockquote class="quote"><p class="overline">Loved</p><p>“The generation wasn’t picture perfect, and that made it even funnier!”</p></blockquote>
           </div>
-          <div class="grid cols-3">
+          <div class="grid cols-3 swipe-m">
             <blockquote class="quote"><p class="overline alt">Could be better</p><p>“I felt like AI made me look different from the photo I took and it threw me off a little bit.”</p></blockquote>
             <blockquote class="quote"><p class="overline alt">Could be better</p><p>“Maybe the waiting for it to be generated.”</p></blockquote>
             <blockquote class="quote"><p class="overline alt">Could be better</p><p>“Not being able to move around the scene.”</p></blockquote>
@@ -379,7 +381,7 @@
     </section>
 
     <!-- PILOT + NEXT -->
-    <section class="section" aria-labelledby="next-title">
+    <section id="next-steps" class="section" aria-labelledby="next-title">
       <div class="wrap stack">
         <div class="stack-sm">
           <p class="overline">Looking back and forward</p>
@@ -413,13 +415,13 @@
     </section>
 
     <!-- REFLECTION -->
-    <section class="section band" aria-labelledby="reflect-title">
+    <section id="takeaways" class="section band" aria-labelledby="reflect-title">
       <div class="wrap stack">
         <div class="stack-sm">
           <p class="overline">Reflection</p>
           <h2 class="h2" id="reflect-title">What I took away</h2>
         </div>
-        <div class="grid cols-3">
+        <div class="grid cols-3 swipe-m">
           <div class="card on-band" style="padding:32px"><p class="overline">1</p><h3 class="h3">A constraint can be the brief</h3><p class="small">The limited lift capacity became the whole experience, and 91% found the wait fine.</p></div>
           <div class="card on-band" style="padding:32px"><p class="overline">2</p><h3 class="h3">Delight carries a rough prototype</h3><p class="small">Visitors laughed at imperfect results, but likeness was the weakest score at 3.36 out of 5.</p></div>
           <div class="card on-band" style="padding:32px"><p class="overline">3</p><h3 class="h3">Test in the real place</h3><p class="small">The exhibition showed what the pilot didn’t: the wait wasn’t the problem, the characters were.</p></div>
@@ -444,5 +446,7 @@
   </footer>
 
   <script src="../assets/js/site.js"></script>
+  <script src="../assets/js/nav.js" defer></script>
+  <script src="../assets/js/chapters.js" defer></script>
 </body>
 </html>

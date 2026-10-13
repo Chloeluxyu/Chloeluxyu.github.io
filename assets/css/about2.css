@@ -50,8 +50,8 @@
 .c-track figure.is-video { position: relative; }
 .c-track figure.is-video::after { content: ""; position: absolute; left: 50%; top: 46%; width: 64px; height: 64px; margin: -32px 0 0 -32px; border-radius: 50%; background: rgba(255,255,255,.9) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M9 6.5v11l9-5.5z' fill='%2326211f'/%3E%3C/svg%3E") center/34px no-repeat; box-shadow: 0 8px 20px rgba(38,33,31,.35); pointer-events: none; transition: opacity .2s ease; }
 .c-track figure.is-video.playing::after { opacity: 0; }
-.c-track video { height: 400px; width: auto; max-width: 78vw; border-radius: 18px; background: #000; box-shadow: 0 14px 26px -16px rgba(38,33,31,.55); }
-.c-track img { height: 400px; width: auto; max-width: 78vw; border-radius: 18px; background: var(--cream); box-shadow: 0 14px 26px -16px rgba(38,33,31,.55); }
+.c-track video { height: auto; width: auto; max-height: 400px; max-width: 78vw; border-radius: 18px; background: #000; box-shadow: 0 14px 26px -16px rgba(38,33,31,.55); }
+.c-track img { height: auto; width: auto; max-height: 400px; max-width: 78vw; border-radius: 18px; background: var(--cream); box-shadow: 0 14px 26px -16px rgba(38,33,31,.55); }
 .c-nav { all: unset; cursor: pointer; width: 46px; height: 46px; border-radius: 50%; border: 2px solid var(--ink); display: grid; place-items: center; transition: background .15s ease, color .15s ease, opacity .15s ease; }
 .c-nav:hover:not(:disabled) { background: var(--ink); color: #fff; }
 .c-nav:disabled { opacity: .3; cursor: default; }
@@ -79,7 +79,7 @@
   .int .lbl { white-space: normal; text-align: left; }
   .c-wrap { grid-template-columns: 1fr; }
   .c-nav { display: none; }
-  .c-track img, .c-track video { height: 300px; }
+  .c-track img, .c-track video { max-height: 300px; }
   .carousel { padding: 30px 12px 20px; }
 }
 @media (prefers-reduced-motion: reduce) { .int-stage .disc svg { animation: none; } .carousel.in { animation: none; } .c-track { scroll-behavior: auto; } .int .ico { transition: none; } }

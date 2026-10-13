@@ -86,7 +86,7 @@
         if (multi) { img.dataset.zoom = '1'; img.tabIndex = 0; img.title = 'Click to enlarge';
           img.addEventListener('keydown', (e) => { if (e.key === 'Enter' || e.key === ' ') { e.preventDefault(); img.click(); } }); }
         img.loading = i > 3 ? 'lazy' : 'eager'; img.decoding = 'async';
-        img.addEventListener('load', () => { if (img.naturalHeight < 450) img.style.height = Math.min(400, img.naturalHeight * 2) + 'px'; update(); });
+        img.addEventListener('load', () => { update(); });
         img.dataset.label = LABELS[key + '-' + n] || '';
         fig.appendChild(img);
         if (LABELS[key + '-' + n]) { const b = document.createElement('span'); b.className = 'pic-label'; b.textContent = LABELS[key + '-' + n]; fig.appendChild(b); fig.classList.add('labeled'); }
